@@ -1,0 +1,221 @@
+:root {
+  /* --- DEFAULT (DARK MODE) VARIABLES --- */
+  --bg-body: rgba(36, 40, 50, 1);
+  --bg-card: rgba(36, 40, 50, 1);
+  --bg-gradient-start: rgba(36, 40, 50, 1);
+  --bg-gradient-end: rgba(37, 28, 40, 1);
+  --text-color: #7e8590;
+  --border-color: #42434a;
+  --icon-stroke: #7e8590;
+  --card-bg: #2c313c;
+  --highlight: #5353ff;
+}
+
+/* --- LIGHT MODE OVERRIDES --- */
+body.light-mode {
+  --bg-body: #eef0f4;
+  --bg-card: #ffffff;
+  --bg-gradient-start: #ffffff;
+  --bg-gradient-end: #f8f9fa;
+  --text-color: #2d333b;
+  --border-color: #d0d7de;
+  --icon-stroke: #2d333b;
+  --card-bg: #f1f3f6;
+}
+
+body {
+  background-color: var(--bg-body);
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s ease;
+}
+
+.card {
+  width: 220px;
+  background-color: var(--bg-card);
+  background-image: linear-gradient(
+    139deg,
+    var(--bg-gradient-start) 0%,
+    var(--bg-gradient-start) 0%,
+    var(--bg-gradient-end) 100%
+  );
+  user-select: none;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+/* Hide default radios/checkboxes */
+.card .list .element label input[type="radio"],
+.card .list .element label input[type="checkbox"] {
+  display: none;
+}
+
+.card .separator, .separator {
+  border-top: 1.5px solid var(--border-color);
+  transition: border-color 0.3s ease;
+  list-style: none;
+}
+
+.card .list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 0px;
+}
+
+/* --- LABEL LAYOUT (FIXED) --- */
+.card .list .element > label {
+  display: flex;
+  align-items: center;
+  color: var(--text-color);
+  gap: 10px;
+  transition: all 0.3s ease-out;
+  padding: 6px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  
+  /* NEW: Forces the label to fill the container */
+  width: 100%; 
+  box-sizing: border-box; 
+}
+
+.card .list .element label svg {
+  width: 19px;
+  height: 19px;
+  transition: all 0.3s ease-out;
+  stroke: var(--icon-stroke) !important;
+}
+
+/* --- ALIGNMENT: SHORTCUTS & SWITCHES --- */
+.shortcut {
+  margin-left: auto; /* Pushes text to right */
+  font-size: 0.85em;
+  opacity: 0.7;
+  font-weight: normal;
+}
+
+/* --- TOGGLE SWITCH STYLES --- */
+.switch-container {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 22px;
+  
+  /* NEW: Pushes switch to right and aligns with shortcuts */
+  margin-left: auto; 
+  margin-right: 0;
+}
+
+.switch-container input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #242832;
+  border: 2px solid #42434a;
+  transition: .3s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  transition: .3s;
+  border-radius: 50%;
+}
+
+/* Switch Active State */
+input:checked + .slider {
+  background-color: #3333b3; 
+  border: 2px solid #ffffff;
+}
+
+input:checked + .slider:before {
+  transform: translateX(18px);
+}
+
+/* --- ACTIVE STATE (BLUE HIGHLIGHT) --- */
+/* Standard Active State for all buttons (including Light Mode) */
+.card .list .element label:has(input:checked), 
+.card .list .element label:hover {
+  background-color: var(--color); 
+  color: #fff;
+}
+
+.card .list .element label:active {
+  transform: scale(0.96);
+}
+
+.card .list .element label:has(input:checked) svg,
+.card .list .element label:hover svg {
+  stroke: #fff !important;
+}
+
+/* --- STATS DASHBOARD STYLES --- */
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1.5px solid var(--border-color);
+  animation: slideDown 0.3s ease-out;
+}
+
+.stat-card {
+  background-color: var(--card-bg);
+  border-radius: 6px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.stat-label {
+  font-size: 10px;
+  color: var(--text-color);
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.stat-value {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--highlight);
+}
+
+.stat-dual {
+  display: flex;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.stat-high { color: #4caf50; }
+.stat-low { color: #ff4444; }
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

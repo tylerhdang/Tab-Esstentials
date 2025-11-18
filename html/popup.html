@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="../style/style.css">
+</head>
+<body>
+  <div class="card">
+    <ul class="list" style="--color:#5353ff;--hover-storke:#fff; --hover-color:#fff">
+      
+      <li class="element">
+        <label for="darkmode">
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <span id="themeIcon" style="display: flex; align-items: center;"></span>
+            <span id="themeLabel">Dark Mode</span>
+          </div>
+          <div class="switch-container">
+            <input type="checkbox" id="darkmode" />
+            <span class="slider"></span>
+          </div>
+        </label>
+      </li>
+
+      <li class="element" style="--color:#5353ff">
+        <label for="toggleStats">
+          <input type="checkbox" id="toggleStats" name="action" />
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#7e8590" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" x2="12" y1="20" y2="10"></line>
+            <line x1="18" x2="18" y1="20" y2="4"></line>
+            <line x1="6" x2="6" y1="20" y2="16"></line>
+          </svg>
+          Stats for nerds
+        </label>
+      </li>
+
+      <li class="separator"></li>
+
+      <li class="element" style="--color:#5353ff">
+        <label for="sortTabs">
+          <input type="radio" id="sortTabs" name="action" />
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#7e8590" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m3 16 4 4 4-4"></path>
+            <path d="M7 20V4"></path>
+            <path d="m21 8-4-4-4 4"></path>
+            <path d="M17 4v16"></path>
+          </svg>
+          <span class="label-text">Sort Tabs</span>
+          <span class="shortcut">Alt+Period</span>
+        </label>
+      </li>
+
+      <li class="element delete" style="--color:#ff4444">
+        <label for="removeDups">
+          <input type="radio" id="removeDups" name="action" />
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#7e8590" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 6h18"></path>
+            <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path>
+            <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path>
+            <line x1="10" x2="10" y1="11" y2="17"></line>
+            <line x1="14" x2="14" y1="11" y2="17"></line>
+          </svg>
+          <span class="label-text">Remove Duplicates</span>
+          <span class="shortcut">Ctrl+Period</span>
+        </label>
+      </li>
+
+      <li class="separator"></li>
+
+      <li class="element" style="--color:rgba(56, 45, 71, 0.836);--hover-storke:#bd89ff;--hover-color:#bd89ff">
+        <label for="creator">
+          <input type="radio" id="creator" name="action" />
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#7e8590" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+          Created by tylerhdang
+        </label>
+      </li>
+    </ul>
+
+    <div id="result" class="result" style="display:none;"></div>
+
+    <div id="statsDashboard" class="stats-grid" style="display:none;">
+      <div class="stat-card">
+        <span class="stat-label">Open Windows</span>
+        <span class="stat-value" id="stat-windows">0</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">Open Tabs</span>
+        <span class="stat-value" id="stat-tabs">0</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">Pinned Tabs</span>
+        <span class="stat-value" id="stat-pinned">0</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">Total Sorted</span>
+        <span class="stat-value" id="stat-sorted">0</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">Deleted Dups</span>
+        <span class="stat-value" id="stat-deleted">0</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">ATH / ATL</span>
+        <div class="stat-dual">
+          <span class="stat-high" id="stat-ath">H:0</span>
+          <span class="stat-low" id="stat-atl">L:0</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="../js/popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+{
+  "manifest_version": 3,
+  "name": "Tab Essential",
+  "version": "1.0",
+  "description": "Essential tools to sort tabs and remove duplicates.",
+  "permissions": ["tabs", "storage"],
+  "action": {
+    "default_popup": "html/popup.html",
+    "default_icon": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  },
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "background": {
+    "service_worker": "js/background.js"
+  },
+  "commands": {
+    "sort-tabs": {
+      "suggested_key": {
+        "default": "Alt+Period",
+        "mac": "Alt+Period"
+      },
+      "description": "Sort tabs by domain"
+    },
+    "remove-duplicates": {
+      "suggested_key": {
+        "default": "Ctrl+Period",
+        "mac": "Command+Period"
+      },
+      "description": "Remove duplicate tabs"
+    }
+  }
+}
