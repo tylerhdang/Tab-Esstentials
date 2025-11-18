@@ -1,7 +1,7 @@
 # Tab Essential
 
 <div align="center">
-  <img src="icon.png" alt="Tab Essential Logo" width="128" height="128">
+  <img src="icon.store.png" alt="Tab Essential Logo" width="128" height="128">
   <p><b>Essential tools to sort tabs, remove duplicates, and track browser stats.</b></p>
 </div>
 
