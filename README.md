@@ -72,12 +72,16 @@ Since the extension is pending store approval, you can load it manually:
     * Select the folder where you extracted the files (ensure you select the root folder containing `manifest.json`).
 5.  **Done!** The Tab Essential icon should now appear in your toolbar.
 
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=tylerhdang/Tab-Esstentials&type=Date)](https://star-history.com/#tylerhdang/Tab-Esstentials&Date)
+
 ## Acknowledgements & Credits
 
 A special thank you to the community for inspiration and design resources:
 
-* **Design Inspiration:** UI components and styling cues were inspired by the work of **Na3ar-17 (Nazar) fero8**.
-* **UIverse:** Certain CSS elements were adapted from designs shared on UIverse.io.
+* **Design Inspiration:** UI components and styling cues were inspired by the work of **fero8**.
+* **UIverse:** Certain CSS elements were adapted from designs shared by **Na3ar-17 (Nazar)** on UIverse.io.
 
 ## License
 
