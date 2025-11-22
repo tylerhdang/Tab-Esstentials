@@ -7,8 +7,7 @@
 
 ---
 
-**Note:** This extension is currently **pending review** on the Chrome Web Store. You can install and use it immediately by following the Manual Installation steps below.
-
+https://chromewebstore.google.com/detail/olglbbganmhmmjaomieldfllpmlnlhdj?utm_source=item-share-cb
 ---
 
 ## About
