@@ -5,10 +5,26 @@
   <p><b>Essential tools to sort tabs, remove duplicates, and track browser stats.</b></p>
 </div>
 
+## Installation
+
+### 📦 From the Chrome Web Store
+The easiest way to install **Tab Essential**:
+
+**[➜ Install from Chrome Web Store](https://chromewebstore.google.com/detail/olglbbganmhmmjaomieldfllpmlnlhdj)**
+
+1. Click **Add to Chrome**
+2. Approve the permissions
+3. (Optional) Pin the extension for quick access  
+   **Chrome Toolbar → Extensions → Pin Tab Essential**
+
 ---
 
-https://chromewebstore.google.com/detail/olglbbganmhmmjaomieldfllpmlnlhdj?utm_source=item-share-cb
----
+### 🧩 Install via Git Clone (Developer Mode)
+
+If you want to modify or build from source:
+
+```bash
+git clone https://github.com/YOUR_USERNAME/Tab-Essential.git
 
 ## About
 
