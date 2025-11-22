@@ -7,25 +7,28 @@
 
 ## Installation
 
-### 📦 From the Chrome Web Store
-The easiest way to install **Tab Essential**:
+### From Chrome Web Store (Recommended)
+<a href="https://chromewebstore.google.com/detail/olglbbganmhmmjaomieldfllpmlnlhdj?utm_source=item-share-cb" target="_blank">
+  <img src="https://storage.googleapis.com/web-dev-uploads/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/iNEddTyWiMfLSwFD6qGq.png" alt="Available in the Chrome Web Store" height="58">
+</a>
 
-**[➜ Install from Chrome Web Store](https://chromewebstore.google.com/detail/olglbbganmhmmjaomieldfllpmlnlhdj)**
+Click the badge above to install Tab Essential directly from the Chrome Web Store.
 
-1. Click **Add to Chrome**
-2. Approve the permissions
-3. (Optional) Pin the extension for quick access  
-   **Chrome Toolbar → Extensions → Pin Tab Essential**
+### Manual Installation (Developer Mode)
+For testing or development purposes, you can load the extension manually:
 
----
-
-### 🧩 Install via Git Clone (Developer Mode)
-
-If you want to modify or build from source:
-
-```bash
-git clone https://github.com/YOUR_USERNAME/Tab-Essential.git
-
+1.  **Download the code:**
+    * Click the green **Code** button above and select **Download ZIP**.
+    * Extract the ZIP file to a folder on your computer.
+2.  **Open Extensions Management:**
+    * Type `chrome://extensions/` (or `opera://extensions`) in your address bar and hit Enter.
+3.  **Enable Developer Mode:**
+    * Toggle the switch in the top-right corner of the page to **ON**.
+4.  **Load the Extension:**
+    * Click the **Load unpacked** button that appears.
+    * Select the folder where you extracted the files (ensure you select the root folder containing `manifest.json`).
+5.  **Done!** The Tab Essential icon should now appear in your toolbar.
+   
 ## About
 
 Tab Essential is a lightweight, privacy-focused browser extension designed to help you manage digital clutter. Whether you have 50 tabs open across 3 windows or just need a quick way to organize your research, Tab Essential provides the tools to clean up your workspace with a single click or keyboard shortcut.
